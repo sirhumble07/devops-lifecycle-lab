@@ -10,9 +10,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Change to repo root
+      - name: Change to repo root directory / move to workspace
         run: cd $GITHUB_WORKSPACE
 
       - name: Build Docker
+        working-directory: ${{ github.workspace }}
         run: docker build -t fastapi-app .
         
