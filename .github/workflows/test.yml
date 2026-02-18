@@ -7,8 +7,12 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Change to repo root
         run: cd $GITHUB_WORKSPACE
+
       - name: Build Docker
         run: docker build -t fastapi-app .
         
