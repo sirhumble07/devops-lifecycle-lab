@@ -10,6 +10,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Remove existing fastapi-container
+        run: |
+          docker rm -f fastapi-container || true
+
       - name: Change to repo root directory / move to workspace
         run: cd $GITHUB_WORKSPACE
 
@@ -18,5 +22,5 @@ jobs:
         run: docker build -t fastapi-app .
 
       - name: Run Docker container
-        run: docker run -d -p 8000:8000 --name fastapi-container fastapi-app
+        run: docker run -d -p 8080:8080 --name fastapi-container fastapi-app
         
