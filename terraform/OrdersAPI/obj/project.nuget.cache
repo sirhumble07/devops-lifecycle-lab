@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mspP1pQzbq4=",
+  "success": true,
+  "projectFilePath": "/Users/vic/Documents/devops-lifecycle-lab/terraform/OrdersAPI/OrdersAPI.csproj",
+  "expectedPackageFiles": [
+    "/Users/vic/.nuget/packages/microsoft.aspnetcore.openapi/10.0.2/microsoft.aspnetcore.openapi.10.0.2.nupkg.sha512",
+    "/Users/vic/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

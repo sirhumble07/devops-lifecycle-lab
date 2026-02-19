@@ -75,3 +75,23 @@ Thumbs.db
 # Env files
 .env
 .env.*
+# .NET secrets and sensitive files
+secrets.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.Local.json
+appsettings.*.json
+*.pfx
+*.pem
+*.key
+*.crt
+*.cert
+# Common sensitive files
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.sqlite
+*.db
+*.bak

@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "terraform", "terraform", "{A3BAFF8E-489D-A02E-C557-F4B087C032DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersAPI", "terraform\OrdersAPI\OrdersAPI.csproj", "{C360833D-8E91-3369-953F-85D281FC5B19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C360833D-8E91-3369-953F-85D281FC5B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C360833D-8E91-3369-953F-85D281FC5B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C360833D-8E91-3369-953F-85D281FC5B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C360833D-8E91-3369-953F-85D281FC5B19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C360833D-8E91-3369-953F-85D281FC5B19} = {A3BAFF8E-489D-A02E-C557-F4B087C032DC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C331D60-DCC3-4A60-AE27-907E7BA649B5}
+	EndGlobalSection
+EndGlobal
