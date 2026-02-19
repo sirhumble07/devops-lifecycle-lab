@@ -11,4 +11,4 @@ A professional FastAPI project template with Docker, CI/CD, and infrastructure a
 
 ## Quick Start
 
-See `steps.md` for setup and deployment instructions.
+See `steps.md` for setup and deployment instructions..
