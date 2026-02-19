@@ -16,4 +16,7 @@ jobs:
       - name: Build Docker
         working-directory: ${{ github.workspace }}
         run: docker build -t fastapi-app .
+
+      - name: Run Docker container
+        run: docker run -d -p 8000:8000 --name fastapi-container fastapi-app
         
