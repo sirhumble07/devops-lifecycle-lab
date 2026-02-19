@@ -9,24 +9,29 @@ on:
 jobs:
   build:
     runs-on: self-hosted
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Remove existing fastapi-container
-        run: |
-          docker rm -f fastapi-container || true
-
-      - name: Build Docker image
-        run: docker build -t fastapi-app .
-
-      - name: Stop existing containers on port 8000
+      # 1. Stop anything using port 8000 BEFORE doing anything else
+      - name: Stop containers on port 8000
         run: |
           docker ps --filter "publish=8000" -q | xargs -r docker stop
           docker ps -a --filter "publish=8000" -q | xargs -r docker rm
 
-      - name: Run Docker container
-        run: docker run -d -p 8000:8000 fastapi-app
+      # 2. Remove container by name (optional safety)
+      - name: Remove existing fastapi-container
+        run: docker rm -f fastapi-container || true
 
+      # 3. Build the new image
+      - name: Build Docker image
+        run: docker build -t fastapi-app .
+
+      # 4. Run the new container
+      - name: Run Docker container
+        run: docker run -d --name fastapi-container -p 8000:8000 fastapi-app
+
+      # 5. Apply Terraform AFTER container is running
       - name: Terraform Apply
         run: |
           terraform init
