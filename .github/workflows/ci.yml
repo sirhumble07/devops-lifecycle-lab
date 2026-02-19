@@ -27,9 +27,9 @@ jobs:
       - name: Build Docker image
         run: docker build -t fastapi-app .
 
-      # 4. Run the new container
-      - name: Run Docker container
-        run: docker run -d --name fastapi-container -p 8000:8000 fastapi-app
+      # # 4. Run the new container
+      # - name: Run Docker container
+      #   run: docker run -d --name fastapi-container -p 8000:8000 fastapi-app
 
       # 5. Apply Terraform AFTER container is running
       - name: Terraform Apply
