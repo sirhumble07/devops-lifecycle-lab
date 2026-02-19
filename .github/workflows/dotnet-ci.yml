@@ -12,12 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Restore
-        run: dotnet restore ./OrdersAPI/OrdersAPI.csproj
+        run: dotnet restore ./OrdersAPI/OrdersAPI/OrdersAPI.csproj
       - name: Build
-        run: dotnet build --no-restore ./OrdersAPI/OrdersAPI.csproj
+        run: dotnet build --no-restore ./OrdersAPI/OrdersAPI/OrdersAPI.csproj
       - name: Test
-        run: dotnet test ./OrdersAPI/OrdersAPI.csproj
+        run: dotnet test ./OrdersAPI/OrdersAPI/OrdersAPI.csproj
       - name: Publish
-        run: dotnet publish -c Release -o publish ./OrdersAPI/OrdersAPI.csproj
+        run: dotnet publish -c Release -o publish ./OrdersAPI/OrdersAPI/OrdersAPI.csproj
       - name: Build Docker image
-        run: docker build -t orders-api ./OrdersAPI
+        run: docker build -t orders-api ./OrdersAPI/OrdersAPI
